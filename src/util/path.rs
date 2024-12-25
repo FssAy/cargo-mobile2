@@ -133,7 +133,7 @@ fn common_root(abs_src: &Path, abs_dest: &Path) -> PathBuf {
         if abs_src.starts_with(&dest_root) {
             return dest_root;
         } else if !dest_root.pop() {
-            unreachable!("`abs_src` and `abs_dest` have no common root");
+            unreachable!("`abs_src` ({abs_src}) and `abs_dest` ({abs_dest}) have no common root");
         }
     }
 }
